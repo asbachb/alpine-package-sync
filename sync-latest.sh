@@ -8,7 +8,7 @@ do
 done
 
 if [ -z "$CONFIG_FILE" ]; then
-	echo "Please provide a config file with parameter \"-c PATH_TO_CONFIG_FILE\""
+	echo "Please provide a config file with parameter. Usage \"sync-latests.sh -c PATH_TO_CONFIG_FILE\""
 	exit 1
 fi
 if [ ! -f "$CONFIG_FILE" ]; then
@@ -17,7 +17,7 @@ if [ ! -f "$CONFIG_FILE" ]; then
 fi
 
 . $CONFIG_FILE
-
+s
 for version in ${VERSIONS[*]}
 do
 	for repository in ${REPOSITORY[*]}
